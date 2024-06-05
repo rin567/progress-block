@@ -1,0 +1,25 @@
+.progress_container {
+	width: 160px;
+	height: 160px;
+}
+
+.circular-chart {
+	display: block;
+	width: 160px;
+	height: 160px;
+}
+
+.circle-bg {
+	fill: none;
+	stroke: #eee;
+	stroke-width: 2.8;
+}
+
+.circle {
+	fill: none;
+	stroke-width: 2.8;
+	stroke: #0015ff;
+	transition: stroke-dasharray 0.35s;
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}
