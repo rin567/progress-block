@@ -1,5 +1,7 @@
 ## ProgressBlock Component
 
+https://rin567.github.io/progress-block/
+
 This is a custom HTML element that renders a circular progress chart.
 
 For use this custom element copy folder 'progressBlock' to project and import file 'progressBlock.js' to script.
