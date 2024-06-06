@@ -9,7 +9,7 @@
 		"build:prod": "webpack --env mode=production",
 		"build:mobile": "webpack --env mode=production --env platform=mobile",
 		"build:desktop": "webpack --env mode=production --env platform=desktop",
-		"predeploy": "rm -rf build && npm build:prod",
+		"predeploy": "rm -rf build && npm run build:prod",
 		"deploy": "gh-pages -d build"
 	},
 	"keywords": [],
