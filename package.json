@@ -2,12 +2,15 @@
 	"name": "block-progress",
 	"version": "1.0.0",
 	"main": "index.js",
+	"homepage": "https://github.com/rin567/progress-block",
 	"scripts": {
 		"start": "webpack serve --env mode=development",
 		"build:dev": "webpack --env mode=development",
 		"build:prod": "webpack --env mode=production",
 		"build:mobile": "webpack --env mode=production --env platform=mobile",
-		"build:desktop": "webpack --env mode=production --env platform=desktop"
+		"build:desktop": "webpack --env mode=production --env platform=desktop",
+		"predeploy": "rm -rf build && npm build:prod",
+		"deploy": "gh-pages -d build"
 	},
 	"keywords": [],
 	"author": "",
@@ -15,6 +18,7 @@
 	"description": "",
 	"devDependencies": {
 		"css-loader": "^7.1.2",
+		"gh-pages": "^6.1.1",
 		"html-webpack-plugin": "^5.6.0",
 		"style-loader": "^4.0.0",
 		"webpack": "^5.91.0",
