@@ -6,23 +6,25 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<h1>Progress</h1>
-		<div class="progress_container">
-			<progress-block value="0"></progress-block>
-		</div>
-		<div class="flex_container">
-			<div class="flex_container">
-				<input id="value" type="text" />
-				<label for="value">Value</label>
-			</div>
-			<div class="flex_container">
-				<input id="animate" type="checkbox" />
-				<label for="animate">Animate</label>
-			</div>
-			<div class="flex_container">
-				<input id="hide" type="checkbox" />
-				<label for="hide">Hide</label>
-			</div>
-		</div>
+		<header><h1>Progress</h1></header>
+		<main class="main_container">
+			<section class="progress_container">
+				<progress-block></progress-block>
+			</section>
+			<section class="controls_container">
+				<div class="controls_container__item">
+					<input id="value" value="0" maxlength="3" class="input_value" />
+					<label class="text_label" for="value">Value</label>
+				</div>
+				<div class="controls_container__item">
+					<input id="animate" type="checkbox" class="toggle_button" />
+					<label class="text_label" for="animate">Animate</label>
+				</div>
+				<div class="controls_container__item">
+					<input id="hide" type="checkbox" class="toggle_button" />
+					<label class="text_label" for="hide">Hide</label>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>

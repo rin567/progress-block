@@ -1,25 +1,111 @@
+@font-face {
+	font-family: 'GT Eesti Pro Display';
+	src: url('./fonts/gteestiprodisplay_light.otf') format('opentype');
+	font-style: normal;
+	font-weight: normal;
+}
+@mixin landscape {
+	@media screen and (orientation: landscape) {
+		@content;
+	}
+}
+
+body {
+	font-family: 'GT Eesti Pro Display';
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	background-color: #fff;
+	height: 100vh;
+	width: 100vw;
+
+	& header {
+		padding: 20px 0 0 20px;
+	}
+	& h1 {
+		font-size: 18px;
+		margin: 0;
+	}
+	& .input_value {
+		font-family: 'GT Eesti Pro Display';
+		font-size: 18px;
+	}
+}
+.main_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 60px;
+	height: calc(100vh - 41px);
+	width: 100vw;
+	@include landscape {
+		flex-direction: row;
+	}
+}
 .progress_container {
 	width: 160px;
 	height: 160px;
 }
-
-.circular-chart {
-	display: block;
-	width: 160px;
-	height: 160px;
+.controls_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	@include landscape {
+		justify-content: center;
+	}
+}
+.controls_container__item {
+	display: flex;
+	width: 155px;
+	gap: 30px;
+	align-items: center;
+}
+.input_value {
+	text-align: center;
+	width: 50px;
+	height: 30px;
+	padding: 7px;
+	border-radius: 30px;
+	box-sizing: border-box;
+	border: 1px #000 solid;
 }
 
-.circle-bg {
-	fill: none;
-	stroke: #eee;
-	stroke-width: 2.8;
-}
+.toggle_button {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 30px;
+	margin: 0;
+	vertical-align: top;
+	background: #dfe6f0;
+	border-radius: 30px;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	&::after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: 3px;
+		top: 1.5px;
 
-.circle {
-	fill: none;
-	stroke-width: 2.8;
-	stroke: #0015ff;
-	transition: stroke-dasharray 0.35s;
-	transform: rotate(-90deg);
-	transform-origin: 50% 50%;
+		width: 26px;
+		height: 26px;
+		background-color: #fff;
+		border-radius: 50%;
+
+		transform: translateX(0);
+	}
+	&:checked {
+		background-color: #005dff;
+		&::after {
+			transform: translateX(18px);
+		}
+	}
 }

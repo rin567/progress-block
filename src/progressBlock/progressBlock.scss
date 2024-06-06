@@ -1,0 +1,28 @@
+.circular-chart {
+	display: block;
+	width: 160px;
+	height: 160px;
+}
+
+.circle-bg {
+	fill: none;
+	stroke: #dfe6f0;
+	stroke-width: 3;
+}
+
+.circle {
+	fill: none;
+	stroke-width: 3;
+	stroke: #005dff;
+	transition: stroke-dasharray 0.35s;
+	&.animate {
+		transform-origin: center;
+		animation: spin 2s linear infinite;
+	}
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
